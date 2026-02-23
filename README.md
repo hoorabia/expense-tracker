@@ -41,4 +41,4 @@ No special prerequisites. Just a modern web browser.
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/pocketbook-expense-tracker.git
+   git clone https://github.com/hoorabia/expense-tracker.git
