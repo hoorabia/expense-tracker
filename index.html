@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Expense Tracker Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <h2 class="logo">PocketBook</h2>
+        <ul>
+            <li class="active">Home</li>
+            <li>Expenses</li>
+            <li>Reports</li>
+            <li>Settings</li>
+        </ul>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main">
+
+        <!-- DASHBOARD SECTION -->
+        <section id="dashboard-section">
+            <h1>Dashboard</h1>
+
+            <!-- TOP CARDS -->
+            <div class="cards">
+                <div class="card">
+                    <h4>Balance</h4>
+                    <p id="balance">Rs 0</p>
+                </div>
+                <div class="card green">
+                    <h4>Income</h4>
+                    <p id="income">Rs 0</p>
+                </div>
+                <div class="card red">
+                    <h4>Expense</h4>
+                    <p id="expense">Rs 0</p>
+                </div>
+            </div>
+
+            <!-- ADD TRANSACTION -->
+            <div class="form-box">
+                <h3>Add Transaction</h3>
+                <form id="transaction-form">
+                    <input type="text" id="text" placeholder="Description">
+                    <input type="number" id="amount" placeholder="Amount (+ income / - expense)">
+                    <button type="submit">Add</button>
+                </form>
+            </div>
+
+            <!-- HISTORY -->
+            <div class="history-box">
+                <h3>Recent Expenses</h3>
+                <ul id="list"></ul>
+            </div>
+        </section>
+
+        <!-- EXPENSES SECTION -->
+        <section id="expenses-section" style="display:none;">
+            <h2>All Expenses</h2>
+            <ul id="all-expenses-list"></ul>
+        </section>
+
+        <!-- REPORTS SECTION -->
+        <section id="reports-section" style="display:none;">
+            <div class="report-box">
+                <h3>Monthly Report</h3>
+                <div class="charts">
+                    <!-- Chart 1 -->
+                    <div class="chart">
+                        <h4>Team Spending Trend</h4>
+                        <div class="bars">
+                            <div class="bar">Jan</div>
+                            <div class="bar">Feb</div>
+                            <div class="bar">Mar</div>
+                            <div class="bar">Apr</div>
+                            <div class="bar">May</div>
+                        </div>
+                    </div>
+
+                    <!-- Chart 2 -->
+                    <div class="chart">
+                        <h4>Day-to-Day Expenses</h4>
+                        <div class="bars purple">
+                            <div class="bar">Food</div>
+                            <div class="bar">Travel</div>
+                            <div class="bar">Bills</div>
+                            <div class="bar">Fuel</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SETTINGS SECTION -->
+        <section id="settings-section" style="display:none;">
+            <h2>Settings</h2>
+            <div class="theme-toggle">
+                <label>
+                    <input type="checkbox" id="theme-switch">
+                    Dark / Light Mode
+                </label>
+            </div>
+        </section>
+
+    </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
